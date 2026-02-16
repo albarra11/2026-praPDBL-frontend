@@ -24,20 +24,21 @@ function formatTime(t) {
 function renderDetail(p) {
   return `
     <div class="detail-grid">
-      <div><b>ID</b><br>${p.id}</div>
-      <div><b>Nama Peminjam</b><br>${p.namaPeminjam}</div>
-      <div><b>Nomor</b><br>${p.nomorPeminjam}</div>
-      <div><b>Ruangan</b><br>${p.namaRuangan}</div>
-      <div><b>Tanggal</b><br>${formatDate(p.tanggal)}</div>
-      <div><b>Mulai</b><br>${formatTime(p.waktuMulai)}</div>
-      <div><b>Selesai</b><br>${formatTime(p.waktuSelesai)}</div>
-      <div><b>Status</b><br>${p.status}</div>
-      <div style="grid-column: 1 / -1;">
-        <b>Alasan</b><br>${p.alasanPeminjaman}
-      </div>
+      <div class="detail-item"><b>ID</b>${p.id}</div>
+      <div class="detail-item"><b>Nama Peminjam</b>${p.namaPeminjam}</div>
+      <div class="detail-item"><b>Nomor</b>${p.nomorPeminjam}</div>
+
+      <div class="detail-item"><b>Ruangan</b>${p.namaRuangan}</div>
+      <div class="detail-item"><b>Tanggal</b>${formatDate(p.tanggal)}</div>
+      <div class="detail-item"><b>Status</b><span class="badge">${p.status}</span></div>
+
+      <div class="detail-item"><b>Mulai</b>${formatTime(p.waktuMulai)}</div>
+      <div class="detail-item"><b>Selesai</b>${formatTime(p.waktuSelesai)}</div>
+      <div class="detail-item full"><b>Alasan</b>${p.alasanPeminjaman}</div>
     </div>
   `;
 }
+
 
 async function load() {
   if (!id) {
