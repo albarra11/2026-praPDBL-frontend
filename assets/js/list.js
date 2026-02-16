@@ -43,7 +43,7 @@ function renderRow(p) {
       <td>${formatTime(p.waktuSelesai)}</td>
       <td>${p.status}</td>
       <td class="actions">
-        <a href="detail.html?id=${p.id}">Detail</a>
+        <button><a href="detail.html?id=${p.id}">Detail</a></button>
         <button data-del="${p.id}">Delete</button>
       </td>
     </tr>
