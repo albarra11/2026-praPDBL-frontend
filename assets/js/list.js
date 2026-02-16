@@ -35,7 +35,6 @@ function formatTime(t) {
 function renderRow(p) {
   return `
     <tr>
-      <td>${p.id}</td>
       <td>${p.namaPeminjam}</td>
       <td>${p.namaRuangan}</td>
       <td>${formatDate(p.tanggal)}</td>
