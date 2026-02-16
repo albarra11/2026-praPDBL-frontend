@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buat Peminjaman</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="brand">
+                <h1>Daftar Peminjaman</h1>
+            </div>
+
+            <nav class="menu">
+                <a class="active" href="index.html">List</a>
+                <a href="create.html">Buat Peminjaman</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <p id="state" class="muted"></p>
+
+            <form id="form" class="form">
+  <div class="grid-2">
+    <label>
+      Nama Peminjam
+      <input name="namaPeminjam" required maxlength="100" />
+    </label>
+
+    <label>
+      Nomor Peminjam
+      <input name="nomorPeminjam" required maxlength="20" />
+    </label>
+
+    <label>
+      Nama Ruangan
+      <input name="namaRuangan" required maxlength="50" placeholder="Contoh: A101" />
+    </label>
+
+    <label>
+      Tanggal
+      <input name="tanggal" type="date" required />
+    </label>
+
+    <label>
+      Waktu Mulai
+      <input name="waktuMulai" type="time" required />
+    </label>
+
+    <label>
+      Waktu Selesai
+      <input name="waktuSelesai" type="time" required />
+    </label>
+  </div>
+
+  <label class="full">
+    Alasan Peminjaman
+    <textarea name="alasanPeminjaman" required maxlength="255" rows="3"></textarea>
+  </label>
+
+  <div class="actions">
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+        </section>
+    </main>
+
+    <script type="module" src="./assets/js/create.js"></script>
+</body>
+
+</html>

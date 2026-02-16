@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail Peminjaman</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="brand">
+                <h1>Daftar Peminjaman</h1>
+            </div>
+
+            <nav class="menu">
+                <a class="active" href="index.html">List</a>
+                <a href="create.html">Buat Peminjaman</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <p id="state" class="muted"></p>
+            <div id="detailBox"></div>
+        </section>
+
+        <section class="card">
+            <h3 style="margin-top:0;">Update Status</h3>
+            <div class="grid-2">
+                <label>
+                    Status
+                    <select id="status">
+                        <option value="Menunggu">Menunggu</option>
+                        <option value="Disetujui">Disetujui</option>
+                        <option value="Ditolak">Ditolak</option>
+                    </select>
+                </label>
+
+                <div class="actions">
+                    <button id="btnUpdate">Update</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="./assets/js/detail.js"></script>
+</body>
+
+</html>
