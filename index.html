@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daftar Peminjaman</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html">List</a>
+    <a href="create.html">Buat Peminjaman</a>
+  </nav>
+
+  <main class="container">
+    <h1>Daftar Peminjaman</h1>
+
+    <section class="card">
+      <div class="row">
+        <input id="keyword" placeholder="Cari (nama/ruangan/alasan/nomor)..." />
+        <select id="status">
+          <option value="">Semua Status</option>
+          <option value="Menunggu">Menunggu</option>
+          <option value="Disetujui">Disetujui</option>
+          <option value="Ditolak">Ditolak</option>
+        </select>
+        <button id="btnSearch">Cari</button>
+      </div>
+      <p id="state" class="muted"></p>
+    </section>
+
+    <section class="card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Ruangan</th>
+            <th>Tanggal</th>
+            <th>Mulai</th>
+            <th>Selesai</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="./assets/js/list.js"></script>
+</body>
+</html>
