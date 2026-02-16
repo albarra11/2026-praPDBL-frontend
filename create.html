@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buat Peminjaman</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html">List</a>
+    <a href="create.html">Buat Peminjaman</a>
+  </nav>
+
+  <main class="container">
+    <h1>Buat Peminjaman</h1>
+
+    <section class="card">
+      <p id="state" class="muted"></p>
+
+      <form id="form" class="form">
+        <label>
+          Nama Peminjam
+          <input name="namaPeminjam" required maxlength="100" />
+        </label>
+
+        <label>
+          Nomor Peminjam
+          <input name="nomorPeminjam" required maxlength="20" />
+        </label>
+
+        <label>
+          Nama Ruangan
+          <input name="namaRuangan" required maxlength="50" placeholder="Contoh: A101" />
+        </label>
+
+        <label>
+          Tanggal
+          <input name="tanggal" type="date" required />
+        </label>
+
+        <div class="row">
+          <label style="flex:1">
+            Waktu Mulai
+            <input name="waktuMulai" type="time" required />
+          </label>
+
+          <label style="flex:1">
+            Waktu Selesai
+            <input name="waktuSelesai" type="time" required />
+          </label>
+        </div>
+
+        <label>
+          Alasan Peminjaman
+          <textarea name="alasanPeminjaman" required maxlength="255" rows="3"></textarea>
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="./assets/js/create.js"></script>
+</body>
+</html>
