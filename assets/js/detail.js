@@ -24,7 +24,6 @@ function formatTime(t) {
 function renderDetail(p) {
   return `
     <div class="detail-grid">
-      <div class="detail-item"><b>ID</b>${p.id}</div>
       <div class="detail-item"><b>Nama Peminjam</b>${p.namaPeminjam}</div>
       <div class="detail-item"><b>Nomor</b>${p.nomorPeminjam}</div>
 
