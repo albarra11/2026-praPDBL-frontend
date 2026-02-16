@@ -10,3 +10,6 @@ button { cursor: pointer; }
 .table th, .table td { border-bottom: 1px solid #eee; padding: 10px; text-align: left; }
 .muted { color: #666; }
 .actions { display: flex; gap: 8px; }
+.form { display: grid; gap: 10px; max-width: 560px; }
+textarea { padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+label { display: grid; gap: 6px; font-weight: 600; }
