@@ -6,15 +6,26 @@ async function request(path, options = {}) {
     ...options,
   });
 
-  let data = null;
   const ct = res.headers.get("content-type") || "";
-  if (ct.includes("application/json")) data = await res.json();
+  let data = null;
+  let text = "";
+
+  // baca body sekali saja, sesuai content-type
+  if (ct.includes("application/json")) {
+    data = await res.json();
+  } else {
+    text = await res.text();
+  }
 
   if (!res.ok) {
-    const msg = (data && (data.message || data.title)) || `HTTP ${res.status}`;
+    const msg =
+      (data && (data.message || data.title)) ||
+      (text && text.trim()) ||
+      `HTTP ${res.status}`;
     throw new Error(msg);
   }
-  return data;
+
+  return data; // untuk DELETE biasanya null, itu OK
 }
 
 export const api = {
